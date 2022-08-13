@@ -40,6 +40,8 @@ parser.add_argument("--mu", default=0.7, \
                     help='Maximum weight given to the genotype-specific subspace')args = parser.parse_args()
 parser.add_argument("--delta", default=0.05, \
                     help='Minimum weight given to the genotype-specific subspace')args = parser.parse_args()
+parser.add_argument("--n_minibatches", default=5, \
+                    help='Number of minibatches to use for inference')args = parser.parse_args()
 
 if args.file_delim == 'tab':
     f_delim = '\t'
@@ -74,5 +76,5 @@ sctblda = scTBLDA(n_inds=y.shape[1], n_genes=x.shape[1], n_snps=y.shape[0], k_b=
 sctblda = sctblda.to(device)
 
 
-run_vi(sctblda, x, y, lr=args.lr, n_epochs=args.n_epochs, seed=args.seed, verbose=True, write_its=args.write_its)
+run_vi(sctblda, x, y, n_minibatches=args.n_minibatches, lr=args.lr, n_epochs=args.n_epochs, seed=args.seed, verbose=True, write_its=args.write_its)
 
