@@ -22,11 +22,11 @@ parser.add_argument("K", type=int, default=50, \
                     help="Number of latent shared topics")
 parser.add_argument("--file_delim", default='tab', choices=['tab','space','comma'],\
                     help="Delimiter for all files")
-parser.add_argument("--lr", default=0.05, \
+parser.add_argument("--lr", default=0.002, \
                     help="Learning rate")
 parser.add_argument("--n_epochs", default=200, \
                     help='Number of epochs to run')
-parser.add_argument("--write_its", default=50, \
+parser.add_argument("--write_its", default=10, \
                     help='Write intermediate output every <X> iterations')
 parser.add_argument("--xi", default=0.02, \ 
                     help='per-factor gene hyperparameter')
