@@ -64,7 +64,7 @@ def import_data(expr_f, geno_f, beta_f, tau_f, samp_map_f, f_delim, device):
 
 
 
-def run_vi(sctblda, x, y, lr=0.002, n_epochs=250, seed=29, verbose=True, write_its=50):
+def run_vi(sctblda, x, y, n_minibatches, lr=0.002, n_epochs=250, seed=29, verbose=True, write_its=50):
         """
         Run variational inference through Pyro to fit the TBLDA model
     
@@ -74,6 +74,8 @@ def run_vi(sctblda, x, y, lr=0.002, n_epochs=250, seed=29, verbose=True, write_i
         x: [samples x genes] pytorch tensor of expression counts
         
         y: [snps x individuals] pytorch tensor of minor allele counts [0,1,2]
+        
+        n_minibatches: Number of minibatches to use for inference
         
         lr: Learning rate
 
