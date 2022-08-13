@@ -36,6 +36,7 @@ scTBLDA is implemented in Python 3.8. It requires the following packages (used v
 9. Sigma (`--sigma`): Per-cell factor proportion hyperparameter. Defaults to 0.02.
 10. Mu (`--mu`): Maximum weight given to the genotype-specific subspace. Defaults to 0.7.
 11. Delta (`--delta`): Minimum weight given to the genotype-specific subspace. Defaults to 0.05.
+12 Number of minibatches to use for inference (`--n_minibatches`). Defaults to 5.
 
   **Output**: X refers to the number of epochs run
   
