@@ -6,11 +6,11 @@
 
 scTBLDA is implemented in Python 3.8. It requires the following packages (used versions are in parentheses):
 
-1. pandas <>
-2. numpy <>
-3. torch <>
-4. pyro <>
-5. h5py <>
+1. pandas 1.0.5
+2. numpy 1.18.5
+3. torch 1.10.0
+4. pyro 1.4.0
+5. h5py 2.10.0
 
 ## Running TBLDA
 
